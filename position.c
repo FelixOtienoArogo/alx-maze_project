@@ -1,0 +1,40 @@
+#include <math.h>
+#include <stdio.h>
+#include "maze.h"
+/**
+ *position- calculates ray positions and directions
+ *
+ *Return: nothing
+ */
+
+void position(int (*worldMap)[24], const int *SCREEN_WIDTH,
+	      const int *SCREEN_HEIGHT, SDL_Instance instance,
+	      double *posX, double *posY, double *dirX, double *dirY,
+	      double *planeX, double *planeY)
+{
+int x = 0, drawStart = 0, drawEnd = 0;
+
+ for (x = *SCREEN_WIDTH; x--;)
+{
+double cameraX = 2 * x / (double)*SCREEN_WIDTH - 1;
+double rayDirX = (*dirX) + (*planeX) * cameraX;
+double rayDirY = (*dirY) + (*planeY) * cameraX;
+/*the box we are in*/
+int mapX = (int)(*posX), mapY = (int)(*posY);
+double perpWallDist = 0, sideDistX = 0, sideDistY = 0;
+/*lenght of ray from one x or y-side to next x or y-side*/
+double deltaDistX = (rayDirX == 0) ? 1e30 : (double)(fabs(1 / rayDirX));
+double deltaDistY = (rayDirY == 0) ? 1e30 : (double)(fabs(1 / rayDirY));
+int hit = 0;/* was a wall hit*/
+int side = hitMiss(&rayDirX, &rayDirY, posX, posY, &mapX, &mapY,
+		   &deltaDistX, &deltaDistY, &sideDistX, &sideDistY, hit, worldMap);
+if (side == 0)
+perpWallDist = (sideDistX - deltaDistX);
+else
+perpWallDist = (sideDistY - deltaDistY);
+drawDim(&drawStart, &drawEnd, &perpWallDist, SCREEN_HEIGHT);
+draw_stuff(&instance, &drawStart, &drawEnd, x, SCREEN_HEIGHT, SCREEN_WIDTH);
+motion(worldMap, posX, posY, dirX, dirY, planeX, planeY);
+}
+SDL_RenderPresent(instance.renderer);
+}

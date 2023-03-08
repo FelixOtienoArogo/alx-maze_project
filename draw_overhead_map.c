@@ -1,0 +1,13 @@
+#include "maze.h"
+/**
+ *drawOverheadMap-Draws the overhead map
+ *
+ *@map: the map to be drawn
+ *
+ *Return: nothing
+ */
+void drawOverheadMap(void)
+{
+/*variables to keep the player coordinate in overhead map*/
+/*int fPlayerMapX, fPlayerMapY, fMinimapWidth;*/
+}
