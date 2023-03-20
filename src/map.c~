@@ -1,4 +1,4 @@
-#include "maze.h"
+#include "headers/maze.h"
 #include <stdio.h>
 /**
  *map - returns the map of the game
@@ -10,7 +10,7 @@ void map(SDL_Instance *instance)
 *instance =
 (SDL_Instance)
 {
-NULL,
+NULL, NULL,
 {
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},

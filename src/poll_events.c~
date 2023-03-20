@@ -1,5 +1,5 @@
 #include <SDL2/SDL.h>
-#include "maze.h"
+#include "headers/maze.h"
 /**
  *poll_events - track events in maze
  *

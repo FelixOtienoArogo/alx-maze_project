@@ -6,7 +6,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "maze.h"
+#include "../headers/maze.h"
 
 int main(void)
 {
@@ -30,7 +30,8 @@ SDL_RenderClear(instance.renderer);
 /*
  *Draw some stuff here
  */
-position(worldMap, &SCREEN_WIDTH, &SCREEN_HEIGHT, &instance, &posX, &posY, &dirX, &dirY, &planeX, &planeY);
+background(&instance, &SCREEN_HEIGHT, &SCREEN_WIDTH);
+position(worldMap, &SCREEN_WIDTH, &SCREEN_HEIGHT, instance, &posX, &posY, &dirX, &dirY, &planeX, &planeY);
 }
 /*Free resources and close SDL*/
 SDL_DestroyRenderer(instance.renderer);

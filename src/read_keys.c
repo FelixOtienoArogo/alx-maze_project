@@ -1,4 +1,4 @@
-#include "maze.h"
+#include "../headers/maze.h"
 #include <stdbool.h>
 /**
  *readKeys - gives value of pressed key to inkeys.

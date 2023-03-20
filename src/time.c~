@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "maze.h"
+#include "headers/maze.h"
 /**
  *time - times the input
  *

@@ -1,4 +1,4 @@
-#include "maze.h"
+#include "../headers/maze.h"
 #include <stdio.h>
 /**
  *map - returns the map of the game

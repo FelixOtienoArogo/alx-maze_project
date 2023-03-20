@@ -1,4 +1,4 @@
-#include "maze.h"
+#include "headers/maze.h"
 /**
  *drawDim - changes dimensions of line to be drawn
  *
@@ -18,5 +18,5 @@ if (*drawStart < 0)
 }
 *drawEnd = lineHeight / 2 + *SCREEN_HEIGHT / 2;
 if (*drawEnd >= *SCREEN_HEIGHT)
-*drawEnd = *SCREEN_HEIGHT -1;
+*drawEnd = *SCREEN_HEIGHT - 1;
 }

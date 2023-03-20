@@ -1,4 +1,4 @@
-#include "maze.h"
+#include "../headers/maze.h"
 /**
  *drawDim - changes dimensions of line to be drawn
  *

@@ -1,6 +1,6 @@
 #include <math.h>
 #include <stdio.h>
-#include "maze.h"
+#include "../headers/maze.h"
 /**
  *position- calculates ray positions and directions
  *
@@ -14,7 +14,7 @@ void position(int (*worldMap)[24], const int *SCREEN_WIDTH,
 {
 int x = 0, drawStart = 0, drawEnd = 0;
 
- for (x = *SCREEN_WIDTH; x--;)
+for (x = *SCREEN_WIDTH; x--;)
 {
 double cameraX = 2 * x / (double)*SCREEN_WIDTH - 1;
 double rayDirX = (*dirX) + (*planeX) * cameraX;
@@ -32,7 +32,7 @@ if (side == 0)
 perpWallDist = (sideDistX - deltaDistX);
 else
 perpWallDist = (sideDistY - deltaDistY);
-drawDim(&drawStart, &drawEnd, &perpWallDist, SCREEN_HEIGHT);
+drawDim(&drawStart, &drawEnd, &perpWallDist, SCREEN_HEIGHT, side);
 draw_stuff(&instance, &drawStart, &drawEnd, x, SCREEN_HEIGHT, SCREEN_WIDTH);
 motion(worldMap, posX, posY, dirX, dirY, planeX, planeY);
 }

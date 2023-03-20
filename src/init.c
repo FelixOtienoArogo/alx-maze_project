@@ -10,7 +10,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "maze.h"
+#include "../headers/maze.h"
 
 int init(SDL_Instance *instance, const int SCREEN_WIDTH,
 	 const int SCREEN_HEIGHT)
