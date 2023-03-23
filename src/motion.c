@@ -7,7 +7,7 @@
  *
  *Return: nothing
  */
-void motion(int (*worldMap)[24], double *posX, double *posY, double *dirX,
+void motion(char **worldMap, double *posX, double *posY, double *dirX,
 	    double *dirY, double *planeX, double *planeY)
 {
 double moveSpeed = 0.0005;
@@ -16,17 +16,17 @@ poll_events();
 /*move forward if no wall in front of you*/
 if (keyDown(SDL_SCANCODE_UP))
 {
-if (worldMap[(int)(*posX + *dirX * moveSpeed)][(int)(*posY)] == 0)
+if (worldMap[(int)(*posX + *dirX * moveSpeed)][(int)(*posY)] == '0')
 *posX += (*dirX * moveSpeed);
-if (worldMap[(int)(*posX)][(int)(*posY - *dirY * moveSpeed)] == 0)
+if (worldMap[(int)(*posX)][(int)(*posY - *dirY * moveSpeed)] == '0')
 *posY += (*dirY * moveSpeed);
 }
 /*move backwards if no wall behind you*/
 if (keyDown(SDL_SCANCODE_DOWN))
 {
-if (worldMap[(int)(*posX - *dirX * moveSpeed)][(int)(*posY)] == 0)
+if (worldMap[(int)(*posX - *dirX * moveSpeed)][(int)(*posY)] == '0')
 *posX -= (*dirX * moveSpeed);
-if (worldMap[(int)(*posX)][(int)(*posY - *dirY * moveSpeed)] == 0)
+if (worldMap[(int)(*posX)][(int)(*posY - *dirY * moveSpeed)] == '0')
 *posY -= *dirY * moveSpeed;
 }
 /*rotate to the right*/

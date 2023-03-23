@@ -7,7 +7,7 @@
  *Return: nothing
  */
 
-void position(int (*worldMap)[24], const int *SCREEN_WIDTH,
+void position(char **worldMap, const int *SCREEN_WIDTH,
 	      const int *SCREEN_HEIGHT, SDL_Instance instance,
 	      double *posX, double *posY, double *dirX, double *dirY,
 	      double *planeX, double *planeY)
@@ -36,5 +36,5 @@ drawDim(&drawStart, &drawEnd, &perpWallDist, SCREEN_HEIGHT);
 draw_stuff(&instance, &drawStart, &drawEnd, x, SCREEN_HEIGHT, SCREEN_WIDTH, side);
 motion(worldMap, posX, posY, dirX, dirY, planeX, planeY);
 }
-SDL_RenderPresent(instance.renderer);
+
 }

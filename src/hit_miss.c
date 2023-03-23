@@ -7,7 +7,7 @@
  */
 int hitMiss(double *rayDirX, double *rayDirY, double *posX, double *posY,
 	    int *mapX, int *mapY, double *deltaDistX, double *deltaDistY,
-	    double *sideDistX, double *sideDistY, int hit, int (*worldMap)[24])
+	    double *sideDistX, double *sideDistY, int hit, char **worldMap)
 {
 /*what direction to step in x or y direction*/
 int stepX, stepY, side; /*was a NS or a EW wall hit*/
@@ -47,7 +47,7 @@ else
 *mapY += stepY;
 side = 1;
 }
-if ((worldMap[*mapX][*mapY]) > 0)
+if ((worldMap[*mapX][*mapY]) > '0')
 hit = 1;
 }
 return (side);
