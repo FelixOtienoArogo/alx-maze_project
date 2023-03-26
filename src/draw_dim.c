@@ -2,6 +2,10 @@
 /**
  *drawDim - changes dimensions of line to be drawn
  *
+ *@drawStart: where to start drawing
+ *@drawEnd: where to stop drawing
+ *@perpWallDist: the perpendicular wall distance
+ *@SCREEN_HEIGHT: the height of the screen
  *
  *Return: nothing
  */

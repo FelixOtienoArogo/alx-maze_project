@@ -32,14 +32,13 @@ if (keyDown(SDL_SCANCODE_M) && mac == 0)
 mac = 1;
 else if (keyDown(SDL_SCANCODE_N) && mac == 1)
 mac = 0;
+
 /*
  *Draw some stuff here
  */
 background(&instance, &SCREEN_HEIGHT, &SCREEN_WIDTH);
 position(worldMap, &SCREEN_WIDTH, &SCREEN_HEIGHT, instance,
-	 &posX, &posY, &dirX, &dirY, &planeX, &planeY);
-if (mac == 1)
-miniMap(&instance);
+	 &posX, &posY, &dirX, &dirY, &planeX, &planeY, &mac);
 SDL_RenderPresent(instance.renderer);
 }
 /*Free resources and close SDL*/

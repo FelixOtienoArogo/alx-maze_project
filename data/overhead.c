@@ -14,7 +14,7 @@ int main(void)
 SDL_Instance instance;
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
-double posX = 22, posY = 22;  /*x and y start position*/
+double posX = 1, posY = 1;  /*x and y start position*/
 
  int i, j, mac = 0;
 SDL_Rect miniMap;
@@ -39,8 +39,8 @@ mac = 1;
 else if (keyDown(SDL_SCANCODE_N) && mac == 1)
 mac = 0;
 
-/*                                                                                                                                                                                                         
- *Draw some stuff here                                                                                                                                                                                     
+/*
+ *Draw some stuff here                                                   
  */
 SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 SDL_RenderDrawLine(instance.renderer, 10,10, 100, 100);
@@ -57,12 +57,20 @@ miniMap.y = i * 5;
   else
    SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
   SDL_RenderFillRect(instance.renderer, &miniMap);
-  SDL_SetRenderDrawColor(instance.renderer,255,255,0,0xFF);
-  if (i < 80 && worldMap[i][j] > '0')
-    {SDL_RenderDrawLine(instance.renderer, posX * 5, posY * 5, i, j);}
 }}
  }
- 
+SDL_SetRenderDrawColor(instance.renderer,255,255,0,0xFF);
+int k, l;
+for( k = posX;k < 24; k++)
+{
+  for (l = posY;l < 24; l++)
+{
+if (worldMap[k][l] > '0' && worldMap[k - 1][k - 1] == '0')
+{
+  SDL_RenderDrawLine(instance.renderer, posX * 5, posY * 5, k * 5, l * 5);}
+ printf("%d  %d\n", k, l);
+ }
+ }
 SDL_RenderPresent(instance.renderer);
 }
 /*Free resources and close SDL*/

@@ -2,14 +2,16 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- *free - free resources after running the programming
+ *free_map - free resources after running the programming
+ *
+ *@map: the map to be freed
  *
  *Return: nothing
  */
 void free_map(char **map)
 {
 int i = 0;
-while(map[i])
+while (map[i])
 {
 free(map[i]);
 i++;

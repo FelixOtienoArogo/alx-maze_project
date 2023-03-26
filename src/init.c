@@ -3,6 +3,7 @@
  *
  *@SCREEN_WIDTH: the width of the window created
  *@SCREEN_HEIGHT: the height of the window created
+ *@instance: the SDL instance
  *
  *Return: success or failure
  */
@@ -22,7 +23,8 @@ fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
 return (1);
 }
 /*Create a new Window instance*/
-instance->window = SDL_CreateWindow("The Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+instance->window = SDL_CreateWindow("The Game", SDL_WINDOWPOS_CENTERED,
+				    SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 if (instance->window == NULL)
 {
 fprintf(stderr, "SDL_CreateWindow Error: %s\n", SDL_GetError());
@@ -30,7 +32,8 @@ SDL_Quit();
 return (1);
 }
 /*Create a new Renderer instance linked to the window */
-instance->renderer = SDL_CreateRenderer(instance->window,-1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+instance->renderer = SDL_CreateRenderer(instance->window, -1,
+					SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 if (instance->renderer == NULL)
 {
 SDL_DestroyWindow(instance->window);

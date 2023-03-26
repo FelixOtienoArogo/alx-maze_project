@@ -1,16 +1,17 @@
 #include "../headers/maze.h"
 #include <stdbool.h>
 /**
- *readKeys - gives value of pressed key to inkeys.
+ *keyDown - gives value of pressed key to inkeys.
  *
+ *@key: the key pressed
  *
- *Return: nothing
+ *Return: the key pressed
  */
 int keyDown(int key)
 {
 SDL_PumpEvents();
 const Uint8 *inkeys = SDL_GetKeyboardState(NULL);
-if(!inkeys)
-return false;
-return(inkeys[key] != 0);
+if (!inkeys)
+return (false);
+return (inkeys[key] != 0);
 }

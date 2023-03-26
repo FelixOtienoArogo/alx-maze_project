@@ -1,14 +1,16 @@
 #include <SDL2/SDL.h>
 #include "../headers/maze.h"
 /**
- *draw_stuff - draws a
+ *background - draws the sky in the background
  *
  *@instance: the sdl instance
+ *@SCREEN_HEIGHT: the height of the screen
+ *@SCREEN_WIDTH: the width of the screen
  *
- *Return: nothing
+ *Return: 1 on success
  */
 
-int background(SDL_Instance *instance,const int *SCREEN_HEIGHT,
+int background(SDL_Instance *instance, const int *SCREEN_HEIGHT,
 	       const int *SCREEN_WIDTH)
 {
 SDL_Rect rect;

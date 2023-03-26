@@ -1,15 +1,25 @@
 /**
  *hitMiss - check if there is a hit or a miss
  *
- *@parameter: the parameter required
+ *@rayDirX: the direction of ray in x axis
+ *@rayDirY: the direction of ray in y axis
+ *@posX: player position in x axis
+ *@posY: player position in y axis
+ *@mapX: x-index in map
+ *@mapY: y-index in map
+ *@deltaDistX: const
+ *@deltaDistY: const
+ *@sideDistX: distance to side in x-axis
+ *@sideDistY: distance ot side in y-axis
+ *@hit: is a wall hit or not
+ *@worldMap: the map of the play area
  *
  *Return: a hit or a miss
  */
 int hitMiss(double *rayDirX, double *rayDirY, double *posX, double *posY,
 	    int *mapX, int *mapY, double *deltaDistX, double *deltaDistY,
 	    double *sideDistX, double *sideDistY, int hit, char **worldMap)
-{
-/*what direction to step in x or y direction*/
+{ /*what direction to step in x or y direction*/
 int stepX, stepY, side; /*was a NS or a EW wall hit*/
 /*calculate step and initial sideDist*/
 if (*rayDirX < 0)
@@ -32,8 +42,7 @@ else
 stepY = 1;
 *sideDistY = (*mapY + 1.0 - *posY) * (*deltaDistY);
 }
-/*perform DDA*/
-while (hit == 0)
+while (hit == 0) /*perform DDA*/
 {
 if (*sideDistX < *sideDistY)
 {
