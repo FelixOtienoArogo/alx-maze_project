@@ -179,7 +179,7 @@ while (poll_events() != 1)
  //draw buffer
 
  Uint32* bufp;
-  bufp = (Uint32*)instance.window.pixels;
+  bufp = (Uint32*)instance.window->surface;
 
   for(int y = 0; y < SCREEN_HEIGHT; y++)
   {

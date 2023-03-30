@@ -13,7 +13,7 @@ char character[100 + 1];
 char **map;
 int i = 0;
 FILE *fpointer;
-char *path = "data/map.txt";
+char *path = "../data/map1.txt";
 
 fpointer = fopen(path, "r");
 
