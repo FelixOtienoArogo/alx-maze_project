@@ -1,29 +1,20 @@
 ---
 layout: post
-title:  "Welcome to The Game!"
+title:  "Features of The Game!"
 date:   2023-03-31 00:16:44 +0300
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+<b>1. Collision detection</b>
 
-`YEAR-MONTH-DAY-title.MARKUP`
+The player is unable to walk through walls
+![pic2](../images/Screenshot from 2023-03-31 22-50-24.png)   
+<b>2. Minimap</b>
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+The player can activate a minimap to be able to orient themselves in the maze
+![pic3](../images/)   
+<b>3. Orientation</b>
 
-Jekyll also offers powerful support for code snippets:
+The north-south and east-west facing walls are colored differently so the player is better able to orient themselves.
+![pic4](../images/)
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
