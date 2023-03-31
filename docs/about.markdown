@@ -4,15 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+For a very long time I have always wanted to be able to build something cool using C appart from the usual embended system projects. This project comes as a personal victory to me as I have been able to make my idea of a maze game come true.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+You can access the souce code for The Game at Github:
+[alx-maze_project](https://github.com/FelixOtienoArogo/alx-maze_project)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
+Please find me on [Twitter](https://www.twitter.com/Felix+Otieno+Arogo) or [Github](https://github.com/FelixOtienoArogo)
 
 [jekyll-organization]: https://github.com/jekyll
