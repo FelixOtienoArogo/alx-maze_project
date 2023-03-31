@@ -8,7 +8,7 @@ categories: jekyll update
 <b>1. Collision detection</b>
 
 The player is unable to walk through walls
-![pic2](../images/Screenshot from 2023-03-31 22-50-24.png)   
+![pic2](../images/pic4.png)   
 <b>2. Minimap</b>
 
 The player can activate a minimap to be able to orient themselves in the maze
