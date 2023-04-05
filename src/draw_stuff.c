@@ -7,7 +7,7 @@
  *@drawStart: where to start drawing
  *@drawEnd: where to end drawing
  *@SCREEN_HEIGHT: The height of the screen
- *@SCREEN_WIDTH: the width of the surface
+ *@SCREEN_WIDTH: the width of the screen
  *@side: check which side the wall is facing
  *@x: counter
  *

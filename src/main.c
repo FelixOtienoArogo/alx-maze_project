@@ -20,6 +20,7 @@ double planeX = 0, planeY = 0.66; /*the 2d raycaster version of camera plane*/
 map(&instance);
 char **worldMap = instance.worldMap;
 int mac = 0;
+
 if (init(&instance, SCREEN_WIDTH, SCREEN_HEIGHT) != 0)
 {
 return (1);
