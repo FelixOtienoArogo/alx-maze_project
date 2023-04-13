@@ -18,10 +18,10 @@ Find me on [LinkedIn](https://www.linkendIn.com/in/felix-otieno-arogo)
 `$ git clone https://github.com/FelixOtienoArogo/alx-maze_project.git`
 
 ## Usage:
--Run command `make build` then `make run` on the terminal
-*Use up and down arrow keys to move forward and backward.
-*Use right and left arrow keys to turn the camera to the right or left.
-*Use M key to enable the minimap and N key to disable it.
-+Leave the game by pressing esc key.
+1. Run command `make build` then `make run` on the terminal
+2. Use up and down arrow keys to move forward and backward.
+3. Use right and left arrow keys to turn the camera to the right or left.
+4. Use M key to enable the minimap and N key to disable it.
+5. Leave the game by pressing esc key.
 
 ![Screenshot of The Game](https://github.com/FelixOtienoArogo/alx-maze_project/raw/master/docs/images/pic2.png)
