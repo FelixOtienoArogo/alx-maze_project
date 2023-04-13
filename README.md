@@ -1,8 +1,11 @@
-The Game!
+# The Game!
 
-A maze game to find and eliminate your enemies.
+## Introduction:
 
-Features:
+This is a maze game to find and eliminate your enemies. Please go through the [langing page](https://felixotienoarogo.github.io/alx-maze_project/) and also [the blog](https://medium.com/@felixarogo/building-a-dream-7885e1a88e03) to learn more about this project.
+Find me on [LinkedIn](https://www.linkendIn.com/in/felix-otieno-arogo)
+
+## Features:
 
 1. Collision detection:
    The player is unable to walk through walls
@@ -11,9 +14,14 @@ Features:
 3. Orientation:
    The north-south and east-west facing walls are colored differently so the player is better able to orient themselves.
 
-About:
-For a very long time I have always wanted to be able to build something cool using C appart from the usual embended system projects. This project comes as a personal victory to me as I have been able to make my idea of a maze game come true.
-Twitter link -
-https://www.twitter.com/Felix+Otieno+Arogo
-Github repo -
-https://github.com/FelixOtienoArogo/alx-maze_project
+## Installation:
+`$ git clone https://github.com/FelixOtienoArogo/alx-maze_project.git`
+
+## Usage:
+-Run command `make build` then `make run` on the terminal
+*Use up and down arrow keys to move forward and backward.
+*Use right and left arrow keys to turn the camera to the right or left.
+*Use M key to enable the minimap and N key to disable it.
++Leave the game by pressing esc key.
+
+![Screenshot of The Game](https://github.com/FelixOtienoArogo/alx-maze_project/raw/master/docs/images/pic2.png)
